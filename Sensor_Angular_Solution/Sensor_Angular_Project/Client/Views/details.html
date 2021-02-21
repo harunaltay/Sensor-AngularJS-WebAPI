@@ -1,0 +1,14 @@
+﻿<div ng-controller="DetailsController">
+    <h2>Sensor</h2>
+    <div>
+       Description:  {{data.SensorDescription}}.
+    </div>
+    <div>
+        Sensor Production Year: {{data.SensorProductionYear}}
+    </div>
+    <hr />
+    <button class="btn btn-success" ng-click="edit()">Edit</button>
+    <a href="/Home/Index" class="btn btn-primary"><< List</a>
+    <hr />
+    <div ng-include="'/Client/Views/edit.html'"></div>
+</div>

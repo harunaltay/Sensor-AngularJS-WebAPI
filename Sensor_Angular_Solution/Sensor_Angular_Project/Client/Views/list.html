@@ -1,0 +1,27 @@
+﻿<div ng-controller="ListController">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Sensor Id</th>
+            <th>Sensor Name</th>
+            <th>Sensor Description</th>
+            <th>Sensor Production Year</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="sensor in data">
+            <td>{{sensor.SensorId}}</td>
+            <td>{{sensor.SensorName}}</td>
+            <td>{{sensor.SensorDescription}}</td>
+            <td>{{sensor.SensorProductionYear}}</td>
+            <td>
+                <a class="btn btn-default" href="#/details/{{sensor.SensorId}}">Details</a>
+                <button class="btn btn-default" ng-click="delete(sensor)">Delete</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-default" ng-click="create()">Create</button>
+    <div ng-include="'/Client/Views/edit.html'"></div>
+</div>

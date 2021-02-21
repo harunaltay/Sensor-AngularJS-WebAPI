@@ -1,0 +1,29 @@
+﻿<div ng-controller="EditController">
+    <form ng-show="isEditable()">
+        <fieldset>
+            <div class="form-group">
+                <label for="sensorName">
+                    Sensor Name
+                </label>
+                <input id="sensorName" type="text" ng-model="edit.sensor.SensorName" required class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="sensorDescription">
+                    Sensor Description
+                </label>
+                <input id="sensorDescription" type="text" ng-model="edit.sensor.SensorDescription" required class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label for="sensorProductionYear">
+                    Sensor Production Year
+                </label>
+                <input id="sensorProductionYear" type="number" ng-model="edit.sensor.SensorProductionYear" required min="1900" max="2030" class="form-control" />
+            </div>
+
+            <button class="btn btn-default" ng-click="save()">Save</button>
+            <button class="btn btn-default" ng-click="cancel()">Cancel</button>
+        </fieldset>
+    </form>
+</div>
